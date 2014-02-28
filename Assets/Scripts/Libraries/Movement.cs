@@ -6,11 +6,13 @@ public class Movement
 
     public GameObject player;
 
-    public float verticalSpeed;
-    public float horizontalSpeed;
+    //Speed of the object
+    private float verticalSpeed;
+    private float horizontalSpeed;
 
-    public float maxVerticalSpeed;
-    public float maxHorizontalSpeed;
+    //Maximum speed the object is allowed to move
+    private float maxVerticalSpeed;
+    private float maxHorizontalSpeed;
 
     /// <summary>
     /// Sets the basic variables for movement
@@ -30,7 +32,7 @@ public class Movement
     }
 
     /// <summary>
-    /// Sets moves the element to the target direction
+    /// Moves the element to the target direction using input forces
     /// </summary>
     /// <param name="dir">RIGHT, LEFT, UP, DOWN</param>
     public void move(string dir)
@@ -39,18 +41,54 @@ public class Movement
         {
             case "RIGHT":
                 player.rigidbody2D.AddForce(Vector2.right * verticalSpeed);
+                restrictMaxVerticalSpeed();
                 break;
             case "LEFT":
                 player.rigidbody2D.AddForce(-Vector2.right * verticalSpeed);
+                restrictMaxVerticalSpeed();
                 break;
             case "UP":
                 player.rigidbody2D.AddForce(Vector2.up * horizontalSpeed);
+                restrictMaxHorizontalSpeed();
                 break;
             case "DOWN":
                 player.rigidbody2D.AddForce(-Vector2.up * horizontalSpeed);
+                restrictMaxHorizontalSpeed();
                 break;
             default:
                 break;
+        }
+    }
+
+    /// <summary>
+    /// Sets the element's velocity to zero
+    /// </summary>
+    public void stop()
+    {
+        player.rigidbody2D.velocity = Vector2.zero;
+    }
+
+    //Restricts the element from exceeding the maximum given vertical speed
+    private void restrictMaxVerticalSpeed()
+    {
+        if (Mathf.Abs(player.rigidbody2D.velocity.x) > maxHorizontalSpeed)
+        {
+            player.rigidbody2D.velocity = new Vector2(
+                Mathf.Sign(player.rigidbody2D.velocity.x) * maxHorizontalSpeed,
+                player.rigidbody2D.velocity.y
+                );
+        }
+    }
+
+    //Restricts the element from exceeding the maximum given horizontal speed
+    private void restrictMaxHorizontalSpeed()
+    {
+        if (Mathf.Abs(player.rigidbody2D.velocity.y) > maxVerticalSpeed)
+        {
+            player.rigidbody2D.velocity = new Vector2(
+                player.rigidbody2D.velocity.x,
+                Mathf.Sign(player.rigidbody2D.velocity.y) * maxVerticalSpeed
+                );
         }
     }
 }
