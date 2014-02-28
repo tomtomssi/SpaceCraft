@@ -2,31 +2,13 @@
 using System.Collections;
 
 public class ScrollingBackground : MonoBehaviour {
-    public GameObject bgTop;
-    public GameObject bgBot;
 
-    private Vector2 topSpawn;
+    public float scrollSpeed = .5f;
+    public float offset;
 
-	// Use this for initialization
-	void Start () {
-        topSpawn = bgTop.transform.position;
-        StartCoroutine("moveBG");
-        Debug.Log(bgBot.transform.position);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
-        
-	}
-
-    public IEnumerator moveBG()
+    void Update()
     {
-        float x = 0.001f;
-        while (true)
-        {
-            bgBot.transform.position = new Vector2(bgBot.transform.position.x, bgBot.transform.position.y + x);
-            yield return new WaitForSeconds(0.05f);
-        }
+        offset += (Time.deltaTime * scrollSpeed) / 10;
+        renderer.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
     }
 }
