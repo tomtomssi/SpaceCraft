@@ -1,0 +1,139 @@
+fileFormatVersion: 2
+guid: 0ff6ce3af091c2746a8daf2afdd70cd4
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: smoke_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 7
+        width: 18
+        height: 166
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: smoke_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 9
+        width: 17
+        height: 166
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: smoke_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 9
+        width: 17
+        height: 168
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: smoke_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 9
+        width: 18
+        height: 162
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: smoke_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 8
+        width: 21
+        height: 164
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: smoke_5
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 8
+        width: 19
+        height: 167
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: smoke_6
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 8
+        width: 20
+        height: 164
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: smoke_7
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 9
+        width: 18
+        height: 166
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: smoke_8
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 9
+        width: 19
+        height: 174
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: smoke_9
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 8
+        width: 21
+        height: 168
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 
