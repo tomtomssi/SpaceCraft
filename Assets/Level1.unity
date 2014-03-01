@@ -83,8 +83,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 115739323}
   - 108: {fileID: 115739322}
-  m_Layer: 0
-  m_Name: Directional light
+  m_Layer: 13
+  m_Name: Background Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,10 +132,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 115739321}
   m_LocalRotation: {x: .408217937, y: -.234569728, z: .109381661, w: .875426114}
-  m_LocalPosition: {x: .402366281, y: -.220884904, z: 0}
+  m_LocalPosition: {x: -2.59763384, y: -.720884919, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1157068273}
 --- !u!1 &485646996
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +241,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1157068273}
   - 114: {fileID: 1157068274}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +257,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3, y: .5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 115739323}
   m_Father: {fileID: 0}
 --- !u!114 &1157068274
 MonoBehaviour:
